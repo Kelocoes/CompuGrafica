@@ -40,3 +40,9 @@ Los operadores que necesiten de otros vectores para su realización están separ
 -Producto punto entre vectores
 
 -Multiplicación entre vectores
+
+## Para ejecutar
+
+Posicionarse en la carpeta de Lab1 y realizar el siguiente código:
+
+-python main.py

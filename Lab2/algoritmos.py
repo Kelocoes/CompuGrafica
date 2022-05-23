@@ -20,19 +20,21 @@ screen.fill(BLACK)
 
 def numerosEntre(x0,xn):
     arr = []
-    aux = x0
-    if (x0>xn):
-        x0 = xn
-        xn = aux
-
     for i in range(x0,xn+1):
         arr.append(i)
+
     return arr
 
 
 
 class linea():
     def __init__(self,x0,y0,x1,y1,color):
+        auxX = -1
+        auxY = -1
+        if x0 > x1:
+            auxX,auxY = x1,y1
+            x1,y1 = x0,y0
+            x0,y0 = auxX,auxY
         self.x0 = x0
         self.y0 = y0
         self.x1 = x1
@@ -43,12 +45,16 @@ class linea():
         m = -(self.y1 - self.y0)/(self.x1 - self.x0)
         y = self.y0
         arr = numerosEntre(self.x0, self.x1)
-
+        #print(self.x0,self.x1)
         for i in range(0,len(arr)):
             pg.draw.rect(screen,self.color,(arr[i],round(y),1,1))
+            #print(arr[i],round(y))
             y = y - m
+        
+        
 
     def DDA(self):
+        #print(self.x0,self.y0,self.x1,self.y1)
         dy = (self.y1 - self.y0)
         dx =(self.x1 - self.x0)
         steps = -1
@@ -60,6 +66,7 @@ class linea():
         xincr = abs(dx)/steps
         yincr = abs(dy)/steps
 
+        #print(yincr,dy,steps)
         X = self.x0;
         Y = self.y0;
         #print(steps)
@@ -170,16 +177,16 @@ def window():
     
     running = True
     while running:
-        # linea1 = linea(100,400,300,100)
-        # linea1.DDA()
-        # linea2 = linea(100,300,300,0)
-        # linea2.basic()
+        #linea1 = linea(50,50,100,25,WHITE)
+        #linea1.Bresenham()
+        #linea2 = linea(50,50,100,25,"red")
+        #linea2.DDA()
         # linea3 = linea(200,300,250,250)
         # linea3.Bresenham()
-        ar = circulo(100,100,50,WHITE)
-        ar.midpoint()
-        ar2 = circulo(300,300,50,(255,0,0))
-        ar2.BresenhamCircle()
+        #ar = circulo(100,100,50,WHITE)
+        #ar.midpoint()
+        #ar2 = circulo(300,300,50,(255,0,0))
+        #ar2.BresenhamCircle()
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 running = False
@@ -187,4 +194,3 @@ def window():
                 pg.quit()
                 sys.exit()
         pg.display.update() 
-

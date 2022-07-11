@@ -84,6 +84,8 @@ function iniciar() {
     
     var viewportText = document.formulario.vertView.value;
     var figureText = document.formulario.figure.value; 
+
+    console.log(figureText)
     
     var subjectPolygon = transcript(figureText);
     var clipPolygon = transcript(viewportText); 

@@ -45,7 +45,6 @@ function cyrusBeck(px1, py1, px2, py2) {
 
 		if (Ddotn != 0) {
 			t = -Wdotn / Ddotn;
-			console.log(t);
 
 			if (Ddotn > 0) {
 				if (t > 1) {
@@ -124,7 +123,7 @@ function dibujar(ctx, pol, strStyle, fillStyle) {
 }
 
 function iniciar() {
-    console.log('hola')
+    
     var canvas = document.getElementById('myCanvas')
     var ctx = canvas.getContext('2d');
     
@@ -133,12 +132,10 @@ function iniciar() {
     var subjectPolygon = transcript(figureText);
 
     var lineaRecortada = cyrusBeck(subjectPolygon[0][0], subjectPolygon[0][1], subjectPolygon[1][0], subjectPolygon[1][1]);
-    console.log(lineaRecortada, "resultado")
     
-    console.log(subjectPolygon, viewport, lineaRecortada, 'holaaa!')
     dibujar(ctx, clipPolygon, '#888','#ffc369');
     dibujar(ctx, subjectPolygon, '#888','#7f95e3');
-    dibujar(ctx, lineaRecortada, '#000','#73ab67');
+    dibujar(ctx, [[lineaRecortada[0][0], lineaRecortada[1][0]],[lineaRecortada[0][1], lineaRecortada[1][1]]], '#000','#73ab67');
 }
 
 window.onload = function () {

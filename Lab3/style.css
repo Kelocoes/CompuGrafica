@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+    margin: 0; 
+    padding: 0; 
+}
+.principal{
+	background-color: rgb(31, 30, 30); 
+	background-size: cover;
+	height: 100vh;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+.navbar .logo{
+	width: 40px;
+	height: auto; 
+	padding: 15px 100px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: red;
+	border-radius: 2px;
+}
+.principal .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center h1{
+	color: white;
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: white;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center h3{
+	color: white;
+	font-size: 30px;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+
+.input {
+	width: 100%;
+	font-size: 15px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+.inputtext {
+	color: white;
+	font-size: 15px;
+	width: 100%;
+	padding: 12px 20px;
+	box-sizing: border-box;
+}
+
+.botones {
+	margin-top: 10px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	margin-bottom: 15px;
+}
+
+.lienzo {
+	margin-top: 10px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.boton{
+	display:inline-block;
+	padding:0.3em 1.2em;
+	margin:0 0.1em 0.1em 0;
+	border:0.16em solid rgba(255,255,255,0);
+	border-radius:2em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-weight:300;
+	color:#FFFFFF;
+	text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+	text-align:center;
+	transition: all 0.2s;
+	}
+	a.button4:hover{
+	border-color: rgba(255,255,255,1);
+	}
+	@media all and (max-width:30em){
+	a.button4{
+	display:block;
+	margin:0.2em auto;
+	}
+	}

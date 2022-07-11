@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Algoritmos de recorte - Shuterland-Hodgman </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "principal">
+            <nav class = "navbar">
+                <img class="logo" src="logo.png">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="Cohen-Shuterland.html">Cohen-Shuterland</a></li>
+					<li><a href="CyrusBeck.html">Cyrus Beck</a></li>
+					<li><a class="active" href="#">Sutherland-Hodgman</a></li>
+					<li><a href="WeitherAtherton.html">Weither-Atherton</a></li>
+				</ul>
+            </nav>
+            <div class = "center">
+                <form name = "formulario">
+                    <label for="vertView" class="inputtext"> Vertices del viewport </label>
+                    <input type = "text" class="input" id="vertView" name="vertView" placeholder="[(a,b)(c,d)...]">
+                    <label for="figure" class="inputtext"> Vertices de la figura </label>
+                    <input type = "text" class="input" id="figure" name="figure" placeholder="[(a,b)(c,d)...]">   
+                </form>
+                <div class = "botones">
+                    <a class="boton" onclick= "iniciar()" style="background-color:#ff0000">Graficar</a>
+                </div>
+                <div class = "lienzo">
+                    <canvas id="myCanvas" width="800" height="450" style="border:1px solid #ffffff;">
+                        Your browser does not support the HTML canvas tag.
+                        </canvas>
+                    <script src="JS/ShuHodg.js"></script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+ 

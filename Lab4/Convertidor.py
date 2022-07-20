@@ -1,7 +1,4 @@
 
-from locale import CHAR_MAX
-
-
 def RGB_to_RBG_Normalized(R, G, B):
     print("RGB to RGB Normalized")
     Rprima = R/255

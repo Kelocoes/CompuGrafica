@@ -12,6 +12,16 @@ def RGB_to_RBG_Normalized(R, G, B):
     print("Bprima " + str(Bprima))
     return Rprima, Gprima, Bprima
 
+def RGB_Normalized_to_RGB(R, G, B):
+    print("RGB Normalized to RGB")
+    R = R*255
+    G = G*255
+    B = B*255
+    print("R " + str(R))
+    print("G " + str(G))
+    print("B " + str(B))
+    return R, G, B
+
 def RGB_to_CMY(R, G, B):
     print("RGB to CMY")
     C = 1-R
@@ -179,3 +189,11 @@ RGB_to_HSL(R, G, B)
 
 H = 88; S = 1; L = 0.5980
 HSL_to_RGB(H, S, L)
+
+R = 80; G = 35; B = 98
+R, G, B = RGB_to_RBG_Normalized(R, G , B)
+RGB_to_CMY(R, G, B)
+
+C = 0.3529; M = 0.80039; Y = 0.5294
+R, G, B = CMY_to_RGB(C, M, Y)
+RGB_Normalized_to_RGB(R, G, B)

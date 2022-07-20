@@ -172,6 +172,7 @@ def HSL_to_RGB(H, S, L):
     print("B " + str(B))
     return R, G, B
 
+#EJEMPLOS
 
 R = 12; G = 12; B = 12
 R, G, B = RGB_to_RBG_Normalized(R, G , B)

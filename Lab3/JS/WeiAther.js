@@ -15,7 +15,7 @@ function WeitherAtherton(figuraEdit) {
         var a = 0, b = 0; 
         var eys = [], poligonosVisibles = [];
 
-        for(let posPareja = 0; i < polygon.length; i++) {
+        for(let posPareja = 0; posPareja < polygon.length; posPareja++) {
             if (polygon[posPareja][2] == 0) {
                 a = a + posPareja; 
             }
@@ -29,7 +29,7 @@ function WeitherAtherton(figuraEdit) {
                 }
                 a = 0; 
                 b = 0; 
-                poligonosVisibles.append(eys); 
+                poligonosVisibles.push(eys); 
                 eys = []
             }
         }
@@ -85,13 +85,16 @@ function iniciar() {
     var viewportText = document.formulario.vertView.value;
     var figureText = document.formulario.figure.value; 
 
-    console.log(figureText)
-    
     var subjectPolygon = transcript(figureText);
     var clipPolygon = transcript(viewportText); 
-    
+    var figurasCortadas = WeitherAtherton(subjectPolygon); 
+    console.log(figurasCortadas)
     dibujar(ctx, clipPolygon, '#888','#ffc369');
     dibujar(ctx, subjectPolygon, '#888','#7f95e3');
+
+    for(let i = 0; i < figurasCortadas.length; i++) {
+        dibujar(ctx, figurasCortadas[i], '#000')
+    }
 }
 
 window.onload = function () {

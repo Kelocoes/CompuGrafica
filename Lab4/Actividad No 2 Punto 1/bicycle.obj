@@ -1,7 +1,6 @@
 # Blender v3.2.1 OBJ File: ''
 # www.blender.org
-mtllib bicycle.mtl
-o holi
+o bicycle
 v -7.060474 0.015239 24.379917
 v -6.968389 0.200684 24.596807
 v 1.911467 3.154327 24.007277
